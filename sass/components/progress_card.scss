@@ -1,0 +1,30 @@
+@import 'sass/abstract/variables';
+
+.progress-card {
+	// FUNCTIONALITY
+		height: 10rem;
+		background-color:$color-primary; 
+		width: 100%;
+		text-align: center;
+		padding: 1rem;
+		margin-bottom: 2rem;
+		border-radius: 3px;
+
+		&--selected {
+			color: $color-white;
+			background-color: $color-secondary;
+		}
+
+		&--active {
+			&:hover {
+				background-color:$color-primary-dark;
+				color: $color-white;
+				cursor: pointer;
+			}
+		}
+
+		&__value {
+			font-size: 5rem;
+		}
+
+}
