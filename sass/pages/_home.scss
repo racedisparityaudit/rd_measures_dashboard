@@ -1,3 +1,27 @@
 .measure-table td, th {
 	text-align: left !important;
 }
+
+.progress__title {
+	margin-bottom: 4rem;
+}
+
+.progress__explanatory-text {
+	margin-bottom: 3rem;
+
+	&__link {
+		&,
+		&:link,
+		&:visited {
+			color: $color-black;
+			text-decoration: none;
+			cursor: pointer;
+			font-weight: 700;
+		}
+		&:hover {
+		text-decoration: underline;
+		}
+	}
+
+
+}

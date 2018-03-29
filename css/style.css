@@ -80,3 +80,16 @@ body {
 
 .measure-table td, th {
   text-align: left !important; }
+
+.progress__title {
+  margin-bottom: 4rem; }
+
+.progress__explanatory-text {
+  margin-bottom: 3rem; }
+  .progress__explanatory-text__link, .progress__explanatory-text__link:link, .progress__explanatory-text__link:visited {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 700; }
+  .progress__explanatory-text__link:hover {
+    text-decoration: underline; }
