@@ -3,6 +3,7 @@ var activeState = 'planned';
 var processCards;
 var stages = ['planned', 'progress', 'review', 'published'];
 var measures = {'planned': [], 'progress':[], 'review':[], 'published':[]};
+var appId = '96d724e7c72db4a9b322ef382e54a796';
 
 var lists = {
   '5a686d4076c5194520f1186c': {name: 'Planned', id: '5a686d4076c5194520f1186c', stage: 'planned'},
@@ -33,7 +34,9 @@ $(document).ready(function () {
 
   Trello.authorize({
     success: refreshData,
-    'error': function() { console.log(data);}
+    name: 'Ethnicity facts and figures dashboard',
+    expiration: 'never',
+    'error': function() { console.log('error in authorize', data);}
   })
 
   var planned = document.getElementById("planned");
@@ -104,8 +107,11 @@ function refreshData() {
       }
 
     },
-    function() {
-      console.log("failure");
+    function(data) {
+      console.log("failure", data);
+      if(data.responseText==='invalid token'){
+        localStorage.clear();
+      }
     }
   )
 }
